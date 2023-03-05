@@ -66,11 +66,26 @@ btnTop.addEventListener('click', function(e){
     });
 })
 
-//FUNCION PARA QUE EL BOTON Y EL HEADER APAREZCA DESPUES DE SCROLL
+//FUNCION PARA QUE EL BOTONAPAREZCA DESPUES DE SCROLL
 window.addEventListener("scroll", function() {
     if (window.pageYOffset > 100) {
       btnTop.style.display = "grid";
     } else {
       btnTop.style.display = "none";
     }
+});
+
+// FUNCION PARA EL MENU RESPONSIVO
+const btnBurguer = document.querySelector('.btnBurguer');
+const btnClose = document.querySelector('.btnClose');
+const headerMenu = document.querySelector('.header_menu');
+
+btnBurguer.addEventListener('click', function (){
+    headerMenu.style.top = '0';
+    headerMenu.style.transition = 'top 0.3s ease-in-out';
+});
+
+btnClose.addEventListener('click', function (){
+    headerMenu.style.top = '-60vh';
+    headerMenu.style.transition = 'top 0.3s ease-in-out';
 });

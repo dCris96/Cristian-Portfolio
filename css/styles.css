@@ -73,6 +73,26 @@ body{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    position: relative;
+}
+
+.btnBurguer{
+    display: none;
+    place-content: center;
+    font-size: 2rem;
+    color: var(--light);
+    cursor: pointer;
+}
+
+.btnClose{
+    display: none;
+    width: 20px;
+    font-size: 2rem;
+    color: var(--light);
+    position: absolute;
+    right: 50%;
+    top: 50px;
+    cursor: pointer;
 }
 
 .menu_lista{
@@ -925,4 +945,97 @@ body{
     place-content: center;
     font-size: 2rem;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1240px) {
+    .sticky{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .header_menu{
+        position: absolute;
+        top: -60vh;
+        left: 0;
+        background-color: var(--dark-two);
+        width: 100%;
+        height: 60vh;
+    }
+
+    .btnBurguer{
+        display: grid;
+    }
+
+    .btnClose{
+        display: block;
+    }
+    
+    .menu_lista{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .menu_item{
+        display: block;
+    }
+    
+    .menu_link{
+        font-size: 1.2rem;
+    }
+
+    /* Estilos de la presentacion */
+    .fotografia{
+        width: 100%;
+        height: 800px;
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+    }
+    
+    .fotografia img{
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    .circulo_big{
+        width: 500px;
+        height: 500px;
+    }
+    
+    .circulo2{
+        left: 50%;
+    }
+    
+    .circulo3{
+        left: 60%;
+    }
+    
+}
+
+@media screen and (max-width: 1000px) {
+    .main_inicio{
+        grid-template-columns: 1fr;
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+    .presentacion{
+        align-items: center;
+    }
+
+    .fotografia{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .about_container {
+        grid-template-columns: 1fr;
+    }
+
+    .about_foto{
+        display: none;
+    }
 }

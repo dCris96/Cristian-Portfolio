@@ -1,10 +1,10 @@
 // EVENTO PARA LA FUNCION DE ESCRITURA
 const typed = new Typed('.typed',{
     strings: [
-        'Técnico informático',
-        'Desarrollador web',
-        'Diseñador',
-        'Fotógrafo',
+        'Computer technician',
+        'Web developer',
+        'Designer',
+        'Photographer',
     ],
     typeSpeed: 65,
     startDelay: 300,
